@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FORMS - ПРАКТИКА</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="form">
+        <form action="#" id="form" class="form__body">
+          <h1 class="form__title">Отправка формы на почту</h1>
+          <section class="form__item">
+            <label for="formName" class="form__label">Имя*</label>
+            <input type="text" name="name" id="formName" class="form__input" />
+          </section>
+          <section class="form__item">
+            <label for="formEmail" class="form__label">Email*</label>
+            <input type="text" name="name" id="formEmail" class="form__input" />
+          </section>
+          <section class="form__item">
+            <div class="form__label">Левша или правша?</div>
+            <div class="options">
+              <div class="options__item">
+                <input
+                  checked
+                  type="radio"
+                  name="hand"
+                  id="formRightHanded"
+                  value="right"
+                  class="options__input"
+                />
+                <label for="formRightHanded" class="options__label"
+                  >Правша</label
+                >
+              </div>
+              <div class="options__item">
+                <input
+                  type="radio"
+                  name="hand"
+                  id="formLeftHanded"
+                  value="left"
+                  class="options__input"
+                />
+                <label for="formLeftHanded" class="options__label">Левша</label>
+              </div>
+            </div>
+          </section>
+          <section class="form__item">
+            <label for="formMessage" class="form__label">Сообщение</label>
+            <textarea
+              name="message"
+              id="formMessage"
+              class="form__input"
+            ></textarea>
+          </section>
+          <section class="form__item">
+            <div class="form__label">Возраст:</div>
+            <select name="age" class="select">
+              <option value="от 18 до 25" selected>Молодой</option>
+              <option value="от 25 до 45">Старый</option>
+              <option value="от 45">Супер старый</option>
+            </select>
+          </section>
+          <section class="form__item">
+            <div class="form__label">Прикрепить фото</div>
+            <div class="file">
+              <div class="file__item">
+                <input
+                  accept=".jpg, .png, .gif"
+                  id="formImage"
+                  type="file"
+                  name="image"
+                  class="file__input"
+                />
+                <div class="file__button">Выбрать</div>
+              </div>
+              <div class="file__prewiew"></div>
+            </div>
+          </section>
+          <section class="form__item">
+            <div class="checkbox">
+              <input
+                checked
+                type="checkbox"
+                name="agreement"
+                class="checkbox__input"
+                id="formAgreement"
+              />
+              <label for="formAgreement" class="checkbox__label"
+                ><span
+                  >Я даю свое согласие на обработку персональных данных</span
+                ></label
+              >
+            </div>
+          </section>
+          <button type="submit" class="form__button">Отправить</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
