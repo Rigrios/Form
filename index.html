@@ -14,11 +14,11 @@
           <h1 class="form__title">Отправка формы на почту</h1>
           <section class="form__item">
             <label for="formName" class="form__label">Имя*</label>
-            <input type="text" name="name" id="formName" class="form__input" />
+            <input type="text" name="name" id="formName" class="form__input _req" />
           </section>
           <section class="form__item">
             <label for="formEmail" class="form__label">Email*</label>
-            <input type="text" name="name" id="formEmail" class="form__input" />
+            <input type="text" name="name" id="formEmail" class="form__input _req _email" />
           </section>
           <section class="form__item">
             <div class="form__label">Левша или правша?</div>
@@ -33,7 +33,7 @@
                   class="options__input"
                 />
                 <label for="formRightHanded" class="options__label"
-                  >Правша</label
+                  ><span>Правша</span></label
                 >
               </div>
               <div class="options__item">
@@ -44,12 +44,12 @@
                   value="left"
                   class="options__input"
                 />
-                <label for="formLeftHanded" class="options__label">Левша</label>
+                <label for="formLeftHanded" class="options__label"><span>Левша</span></label>
               </div>
             </div>
           </section>
           <section class="form__item">
-            <label for="formMessage" class="form__label">Сообщение</label>
+            <label for="formMessage" class="form__label">Сообщение:</label>
             <textarea
               name="message"
               id="formMessage"
@@ -68,16 +68,9 @@
             <div class="form__label">Прикрепить фото</div>
             <div class="file">
               <div class="file__item">
-                <input
-                  accept=".jpg, .png, .gif"
-                  id="formImage"
-                  type="file"
-                  name="image"
-                  class="file__input"
-                />
+                <input type="file" name="images" class="file__input" id="formImage">
                 <div class="file__button">Выбрать</div>
-              </div>
-              <div class="file__prewiew"></div>
+              <div id="formPreview" class="file__prewiew"></div>
             </div>
           </section>
           <section class="form__item">
@@ -86,7 +79,7 @@
                 checked
                 type="checkbox"
                 name="agreement"
-                class="checkbox__input"
+                class="checkbox__input _req"
                 id="formAgreement"
               />
               <label for="formAgreement" class="checkbox__label"
